@@ -65,8 +65,9 @@ router.put("/:id", async (req,res)=>{
 
 
   //GETALL
-  router.get("/", async (req,res)=>{
-
+  router.get("/", async (req,res, next)=>{
+    //console.log("Hi Iam a hotel route")
+      //next();
     try{
       const hotels = await Hotel.find();
       res.status(200).json(hotels)
