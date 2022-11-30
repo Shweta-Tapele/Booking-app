@@ -12,6 +12,7 @@ import express from "express";
 
 import {verifyAdmin} from "../utils/verifyToken.js"*/
 import Hotel from "../models/Hotel.js";
+import { createError } from "../utils/error.js";
 const router = express.Router();
 //CREATE
 router.post("/", async (req,res)=>{
@@ -66,14 +67,16 @@ router.put("/:id", async (req,res)=>{
 
   //GETALL
   router.get("/", async (req,res, next)=>{
-    //console.log("Hi Iam a hotel route")
-      //next();
+    const failed = true
+    //testing the error.js 
+    //if(failed) return next(createError(401,"You are not authenticated"));
     try{
-      const hotels = await Hotel.find();
-      res.status(200).json(hotels)
-    }
+        const hotels = await Hotel.find();
+        res.status(200).json(hotels)
+       }
     catch(err){
-      res.status(500).json(err)
+      //res.status(500).json(err)
+      next(err) 
     }
    
   });
