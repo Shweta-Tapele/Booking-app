@@ -5,11 +5,11 @@ const PropertyList = () => {
   const { data, loading } = useFetch("/hotels/countByType");
 
   const images = [
-    "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-apartments_300/9f60235dc09a3ac3f0a93adbc901c61ecd1ce72e.jpg",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-villas_300/dd0d7f8202676306a661aa4f0cf1ffab31286211.jpg",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-chalet_300/8ee014fcc493cb3334e25893a1dee8c6d36ed0ba.jpg",
+    "https://images1.apartments.com/i2/o2Yl7hqCwOjhMh9AFAzLfhaTexUXtxyVYFbGsIiV8s0/117/sixteen-g-portland-or-primary-photo.jpg?p=1",
+    "https://images1.apartments.com/i2/O2AF4pw3cgjpiXFIQhck7CMzHV6FGzK1LE0xF8SH0Fw/117/ella-portland-or-building-photo.jpg",
+    "https://photos.zillowstatic.com/fp/029dedb9071b64e4fb1dae3c5e150d82-p_e.jpg",
+    "https://images1.apartments.com/i2/2dxXGeJsjA700rAs9KP0shVIz-AwdxCLLDlh_BqtnCQ/117/sanctuary-apartments-portland-or-interior-photo.jpg",
+    "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2019/6/26/1/DOTY2019_Andrew-Suvalsky-Designs_Sutton_4.jpg.rend.hgtvcom.966.644.suffix/1561557149588.jpeg",
   ];
   return (
     <div className="pList">
