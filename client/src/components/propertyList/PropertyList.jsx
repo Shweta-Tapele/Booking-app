@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
 
 const PropertyList = () => {
-  const { data, loading } = useFetch("/hotels/countByType");
+  const { data, loading, error } = useFetch("/hotels/countByType");
 
   const images = [
     "https://images1.apartments.com/i2/o2Yl7hqCwOjhMh9AFAzLfhaTexUXtxyVYFbGsIiV8s0/117/sixteen-g-portland-or-primary-photo.jpg?p=1",
