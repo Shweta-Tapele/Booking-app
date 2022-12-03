@@ -91,7 +91,7 @@ const Header = ({ type }) => {
             <p className="headerDesc">
               <h3>Book the perfect stay for less. Full refundable on most hotels beacuse flexibility matters.</h3>
             </p>
-            {<button className="headerBtn">Sign in / Register</button>}
+            { !user &&  <button className="headerBtn">Sign in / Register</button>}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

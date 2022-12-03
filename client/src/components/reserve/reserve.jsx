@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data } = useFetch(`/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
   const getDatesInRange = (startDate, endDate) => {
@@ -62,6 +62,7 @@ const Reserve = ({ setOpen, hotelId }) => {
         })
       );
       setOpen(false);
+      // add reserve success popup
       navigate("/");
     } catch (err) {}
   };
